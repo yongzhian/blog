@@ -4,8 +4,10 @@
         ${onlineVisitor1Label}${onlineVisitorCnt} <br/>
         &copy; ${year}
         ${footerContent}
+        Powered by  <a href="${servePath}">yongzhian.cn</a>
+        <!--
         Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> •
-        <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}
+        <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> --> ${version}
     </div>
 </footer>
 <div class="back-to-top" onclick="Util.goTop()"></div>

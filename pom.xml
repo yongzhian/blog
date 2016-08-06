@@ -1,19 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Description: Solo POM.
-    Version: 3.11.1.23, Jul 7, 2016
-    Author: <a href="http://88250.b3log.org">Liang Ding</a>
-    Author: <a href="http://www.annpeter.cn">Ann Peter</a>
--->
+<!DOCTYPE project [
+        <!ELEMENT project (modelVersion|groupId|artifactId|packaging|name|version|description|inceptionYear|organization|licenses|developers|issueManagement|mailingLists|scm|properties|dependencies|build|repositories|pluginRepositories)*>
+        <!ATTLIST project
+                xmlns CDATA #REQUIRED
+                xmlns:xsi CDATA #REQUIRED
+                xsi:schemaLocation CDATA #REQUIRED>
+        <!ELEMENT modelVersion (#PCDATA)>
+        <!ELEMENT groupId (#PCDATA)>
+        <!ELEMENT artifactId (#PCDATA)>
+        <!ELEMENT packaging (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT version (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT inceptionYear (#PCDATA)>
+        <!ELEMENT organization (name|url)*>
+        <!ELEMENT url (#PCDATA)>
+        <!ELEMENT licenses (license)*>
+        <!ELEMENT license (name|url)*>
+        <!ELEMENT developers (developer)*>
+        <!ELEMENT developer (id|name|email|url|roles|organization|organizationUrl|timezone)*>
+        <!ELEMENT id (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT roles (role)*>
+        <!ELEMENT role (#PCDATA)>
+        <!ELEMENT organizationUrl (#PCDATA)>
+        <!ELEMENT timezone (#PCDATA)>
+        <!ELEMENT issueManagement (system|url)*>
+        <!ELEMENT system (#PCDATA)>
+        <!ELEMENT mailingLists (mailingList)*>
+        <!ELEMENT mailingList (name|archive|post)*>
+        <!ELEMENT archive (#PCDATA)>
+        <!ELEMENT post (#PCDATA)>
+        <!ELEMENT scm (url)*>
+        <!ELEMENT properties (project.build.sourceEncoding|org.b3log.latke.version|servlet.version|slf4j.version|jsoup.version|pegdown.version|qiniu.version|jetty.version|commons-cli.version|emoji-java.version|maven-compiler-plugin.version|maven-resources-plugin.version|maven-surefire-plugin.version|maven-license-plugin.version|coveralls-maven-plugin.version|maven-min-plugin.version|testng.version|mysql-connector-java.version|year|devTeam)*>
+        <!ELEMENT project.build.sourceEncoding (#PCDATA)>
+        <!ELEMENT org.b3log.latke.version (#PCDATA)>
+        <!ELEMENT servlet.version (#PCDATA)>
+        <!ELEMENT slf4j.version (#PCDATA)>
+        <!ELEMENT jsoup.version (#PCDATA)>
+        <!ELEMENT pegdown.version (#PCDATA)>
+        <!ELEMENT qiniu.version (#PCDATA)>
+        <!ELEMENT jetty.version (#PCDATA)>
+        <!ELEMENT commons-cli.version (#PCDATA)>
+        <!ELEMENT emoji-java.version (#PCDATA)>
+        <!ELEMENT maven-compiler-plugin.version (#PCDATA)>
+        <!ELEMENT maven-resources-plugin.version (#PCDATA)>
+        <!ELEMENT maven-surefire-plugin.version (#PCDATA)>
+        <!ELEMENT maven-license-plugin.version (#PCDATA)>
+        <!ELEMENT coveralls-maven-plugin.version (#PCDATA)>
+        <!ELEMENT maven-min-plugin.version (#PCDATA)>
+        <!ELEMENT testng.version (#PCDATA)>
+        <!ELEMENT mysql-connector-java.version (#PCDATA)>
+        <!ELEMENT dependencies (dependency)*>
+        <!ELEMENT dependency (groupId|artifactId|version|scope|exclusions)*>
+        <!ELEMENT scope (#PCDATA)>
+        <!ELEMENT exclusions (exclusion)*>
+        <!ELEMENT exclusion (groupId|artifactId)*>
+        <!ELEMENT build (resources|plugins|finalName)*>
+        <!ELEMENT resources (resource)*>
+        <!ELEMENT resource (directory|excludes)*>
+        <!ELEMENT directory (#PCDATA)>
+        <!ELEMENT excludes (exclude)*>
+        <!ELEMENT exclude (#PCDATA)>
+        <!ELEMENT plugins (plugin)*>
+        <!ELEMENT plugin (groupId|artifactId|version|configuration|executions|inherited)*>
+        <!ELEMENT configuration (repoToken|encoding|source|target|skipTests|header|quiet|failIfMissing|aggregate|strictCheck|includes|excludes|useDefaultExcludes|mapping|useDefaultMapping|properties|suffix|adminJSs|cssSourceDir|cssTargetDir|jsSourceDir|jsTargetDir|connectors|stopKey|stopPort|systemProperties|reload)*>
+        <!ELEMENT repoToken (#PCDATA)>
+        <!ELEMENT encoding (#PCDATA)>
+        <!ELEMENT source (#PCDATA)>
+        <!ELEMENT target (#PCDATA)>
+        <!ELEMENT skipTests (#PCDATA)>
+        <!ELEMENT header (#PCDATA)>
+        <!ELEMENT quiet (#PCDATA)>
+        <!ELEMENT failIfMissing (#PCDATA)>
+        <!ELEMENT aggregate (#PCDATA)>
+        <!ELEMENT strictCheck (#PCDATA)>
+        <!ELEMENT includes (include)*>
+        <!ELEMENT include (#PCDATA)>
+        <!ELEMENT useDefaultExcludes (#PCDATA)>
+        <!ELEMENT mapping (java)*>
+        <!ELEMENT java (#PCDATA)>
+        <!ELEMENT useDefaultMapping (#PCDATA)>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT devTeam (#PCDATA)>
+        <!ELEMENT executions (#PCDATA)>
+        <!ELEMENT inherited (#PCDATA)>
+        <!ELEMENT suffix (#PCDATA)>
+        <!ELEMENT adminJSs (param)*>
+        <!ELEMENT param (#PCDATA)>
+        <!ELEMENT cssSourceDir (#PCDATA)>
+        <!ELEMENT cssTargetDir (#PCDATA)>
+        <!ELEMENT jsSourceDir (#PCDATA)>
+        <!ELEMENT jsTargetDir (#PCDATA)>
+        <!ELEMENT connectors (connector)*>
+        <!ELEMENT connector (port)*>
+        <!ATTLIST connector
+                implementation CDATA #REQUIRED>
+        <!ELEMENT port (#PCDATA)>
+        <!ELEMENT stopKey (#PCDATA)>
+        <!ELEMENT stopPort (#PCDATA)>
+        <!ELEMENT systemProperties (systemProperty)*>
+        <!ELEMENT systemProperty (name|value)*>
+        <!ELEMENT value (#PCDATA)>
+        <!ELEMENT reload (#PCDATA)>
+        <!ELEMENT finalName (#PCDATA)>
+        <!ELEMENT repositories (repository)*>
+        <!ELEMENT repository (id|name|url|snapshots|releases)*>
+        <!ELEMENT snapshots (enabled)*>
+        <!ELEMENT enabled (#PCDATA)>
+        <!ELEMENT releases (enabled)*>
+        <!ELEMENT pluginRepositories (pluginRepository)*>
+        <!ELEMENT pluginRepository (id|name|url|snapshots|releases)*>
+        ]>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.b3log</groupId>
-    <artifactId>solo</artifactId>
+    <groupId>cn.zain</groupId>
+    <artifactId>blog</artifactId>
     <packaging>war</packaging>
-    <name>Solo</name>
-    <version>1.4.0</version>
+    <name>blog</name>
+    <version>1.0.0</version>
     <description>
         A blogging system written in Java, feel free to create your or your team own blog. 一个用 Java 实现的博客系统，为你或你的团队创建个博客吧。
     </description>
@@ -396,7 +503,7 @@
 
         </plugins>
         
-        <finalName>solo</finalName>
+        <finalName>blog</finalName>
     </build>
     
     <repositories>

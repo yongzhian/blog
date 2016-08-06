@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <title>${welcomeToSoloLabel} Solo!</title>
-        <meta name="keywords" content="Solo,Java 博客,开源" />
+        <meta name="keywords" content="Zain,Java 博客,开源" />
         <meta name="description" content="An open source blog with Java. Java 开源博客" />
-        <meta name="owner" content="B3log Team" />
-        <meta name="author" content="B3log Team" />
+        <meta name="owner" content="Zain Team" />
+        <meta name="author" content="Zain Team" />
         <meta name="generator" content="Solo" />
         <meta name="copyright" content="B3log" />
         <meta name="revised" content="B3log, ${year}" />
@@ -122,7 +122,10 @@
             <div class="footerWrapper">
                 <div class="footer">
                     &copy; ${year}
+                    <!--
                     Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}
+                    -->
+                    Powered by <a href="http://www.yongzhian.cn" target="_blank">Zain</a> • <a href="http://www.yongzhian.cn/services/#blog" target="_blank">Blog</a> ${version}
                 </div>
             </div>
         </div>
