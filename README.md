@@ -76,3 +76,5 @@ See [here](http://solo.b3log.org/CHANGE_LOGS.html).
 
 * [Latke](https://github.com/b3log/latke)
 * [NetBeans](https://netbeans.org)
+
+测试
